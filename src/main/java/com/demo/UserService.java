@@ -31,7 +31,7 @@ public class UserService {
 	}  
 	
 	@POST
-	@Path("/add")
+	@Path("/users")
 	@Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	@Produces(MediaType.TEXT_PLAIN)
 	public String addUser(User newUser) {
@@ -40,7 +40,7 @@ public class UserService {
 	}
 	
 	@PUT
-	@Path("/update")
+	@Path("/users")
 	@Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	@Produces(MediaType.TEXT_PLAIN)
 	public String updateUser(@QueryParam("id") int id, @QueryParam("profession") String newProfession) {
@@ -53,7 +53,7 @@ public class UserService {
 	}
 	
 	@DELETE
-	@Path("/delete")
+	@Path("/users")
 	@Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	@Produces(MediaType.TEXT_PLAIN)
 	public String deleteUser(@QueryParam("id") int id) {
